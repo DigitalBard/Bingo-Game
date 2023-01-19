@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* 빙고판 스타일 */
+table,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  display: none;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 480px;
+}
+
+td {
+  height: 13vh;
+  text-align: center;
+}
+
+input {
+  width: 98%;
+  height: 98%;
+}
+
+/* 상단 타이틀 바 스타일 */
+#titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 12px;
+}
+
+#main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 12px 0;
+}
+
+#bingo_board {
+  padding: 10px 50px;
+}
+
+#buttons {
+  text-align: center;
+}
+
+#notice {
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  width: 300px;
+  height: 50px;
+  overflow-x: auto;
+  border: 1px solid black;
+}
+
+.user {
+  border: 1px solid black;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 준비 버튼 눌렀을 때 나오는 준비 완료 표시를 위한 스타일 */
+.state1,
+.state2,
+.state3,
+.state4,
+.state5,
+.state6 {
+  display: none;
+  width: fit-content;
+  padding: 5px 10px;
+  color: white;
+}
+
+.ready {
+  display: block;
+  background-color: green;
+}
+
+.ready_btn {
+  font-size: 20px;
+  padding: 25px;
+}
+
+.cancelReady_btn {
+  display: none;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.bingo_btn {
+  display: none;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.selected {
+  background-color: #3867d6;
+}
+
+.exit_btn {
+  position: absolute;
+  right: 130px;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.mark {
+  border: 5px solid tomato;
+}
+
+.me {
+  position: absolute;
+  width: 100px;
+  bottom: 5vh;
+  margin-bottom: 12px;
+  left: 10px;
+}
+
+/* 반응형 웹 구현 */
+@media (885px < width < 1300px) {
+  .user {
+    width: 100px;
+  }
+}
+
+@media (max-width: 885px) {
+  #bingo_board {
+    padding: 10px 0;
+  }
+
+  .exit_btn {
+    position: absolute;
+    right: 10px;
+    bottom: 55px;
+    padding: 10px;
+    margin-left: 30px;
+  }
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 10px;
+}
+
+#frame {
+  display: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+#pop_up {
+  display: none;
+  width: 350px;
+  height: 150px;
+  padding: 30px 20px 20px;
+  margin: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#winner {
+  color: blue;
+  font-size: 20px;
+}
+
+.title {
+  margin: 12px 0;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.list {
+  border: 1px solid black;
+  width: 600px;
+  height: 70vh;
+  list-style-type: none;
+}
+
+.makeRoom_btn {
+  height: 100%;
+  padding: 12px;
+  margin-left: 30px;
+}
+
+.modal {
+  display: none;
+  width: 350px;
+  height: 200px;
+  padding: 30px 20px 20px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+.buttons {
+  text-align: right;
+}
+
+.bg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.room {
+  border: 1px solid black;
+  padding: 8px;
+  margin: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768) {
+  .list {
+    width: 100%;
+  }
+}

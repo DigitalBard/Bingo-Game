@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>빙고 게임</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="watingRoomStyle.css" />
+  </head>
+  <body>
+    <h1 class="title">Bingo <small>대기실</small></h1>
+    <div class="screen">
+      <ul class="list"></ul>
+      <button class="makeRoom_btn">방 만들기</button>
+    </div>
+    <div class="modal">
+      <label for="roomTitle">방제</label>
+      <input
+        type="text"
+        id="roomTitle"
+        placeholder="즐거운 빙고 한 판~"
+      /><br /><br />
+      <span>크기</span>
+      <input type="radio" name="size" value="3X3" id="size1" checked /><label
+        for="size1"
+      >
+        3X3</label
+      >
+      <input type="radio" name="size" value="4X4" id="size2" /><label
+        for="size2"
+      >
+        4X4</label
+      >
+      <input type="radio" name="size" value="5X5" id="size3" /><label
+        for="size3"
+      >
+        5X5</label
+      ><br /><br />
+      <label for="theme">주제</label>
+      <input list="themes" id="theme" name="theme" placeholder="숫자" />
+      <datalist id="themes">
+        <option value="숫자"></option>
+        <option value="나라이름"></option>
+        <option value="수도"></option>
+      </datalist>
+      <br /><br />
+      <label for="line">줄수</label>
+      <select name="lines" id="line">
+        <option value="1">1줄</option>
+        <option value="2">2줄</option>
+        <option value="3">3줄</option></select
+      ><br /><br />
+      <div class="buttons">
+        <button class="confirm_btn">확인</button>
+        <button class="cancel_btn">취소</button>
+      </div>
+    </div>
+    <iframe src="gameRoom.html" id="frame"></iframe>
+    <div class="bg"></div>
+    <div id="pop_up">
+      <div><span id="winner"></span>님이</div>
+      <div>승리하였습니다!</div>
+      <br /><br />
+      <button id="ok_btn">확인</button>
+    </div>
+    <script src="openRoom.js"></script>
+  </body>
+</html>

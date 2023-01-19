@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+}
+
+.login_box {
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+}
+
+.login_box > label {
+  margin-right: 8px;
+}
+
+#nickname {
+  margin-right: 8px;
+}

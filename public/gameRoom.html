@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>빙고 게임</title>
+    <link rel="stylesheet" href="gameRoomStyle.css" />
+  </head>
+  <body>
+    <!-- 상단에 제목과 주제 표시 -->
+    <div id="titleBar">
+      <div id="roomTitle">즐거운 빙고 한 판 ~</div>
+      <div id="theme">주제 : 숫자</div>
+    </div>
+
+    <div id="notice">
+      <div id="content"></div>
+    </div>
+    <!-- 방에 입장한 유저 정보와 빙고판 -->
+    <div id="main">
+      <!-- 좌측 유저 정보 -->
+      <div id="left">
+        <div class="p1 user">
+          <p class="name1"></p>
+          <p class="state1">준비 완료</p>
+        </div>
+        <div class="p3 user">
+          <p class="name3"></p>
+          <p class="state3">준비 완료</p>
+        </div>
+        <div class="p5 user">
+          <p class="name5"></p>
+          <p class="state5">준비 완료</p>
+        </div>
+      </div>
+
+      <!-- 가운데 빙고판. 표를 만들고 각 셀에 input을 넣어 입력 받음 -->
+      <div id="bingo_board">
+        <!-- 3 X 3 -->
+        <table id="3X3">
+          <tr>
+            <td class="3X3cell 11" contenteditable="true"></td>
+            <td class="3X3cell 12" contenteditable="true"></td>
+            <td class="3X3cell 13" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="3X3cell 21" contenteditable="true"></td>
+            <td class="3X3cell 22" contenteditable="true"></td>
+            <td class="3X3cell 23" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="3X3cell 31" contenteditable="true"></td>
+            <td class="3X3cell 32" contenteditable="true"></td>
+            <td class="3X3cell 33" contenteditable="true"></td>
+          </tr>
+        </table>
+        <!-- 4 X 4 -->
+        <table id="4X4">
+          <tr>
+            <td class="4X4cell 11" contenteditable="true"></td>
+            <td class="4X4cell 12" contenteditable="true"></td>
+            <td class="4X4cell 13" contenteditable="true"></td>
+            <td class="4X4cell 14" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="4X4cell 21" contenteditable="true"></td>
+            <td class="4X4cell 22" contenteditable="true"></td>
+            <td class="4X4cell 23" contenteditable="true"></td>
+            <td class="4X4cell 24" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="4X4cell 31" contenteditable="true"></td>
+            <td class="4X4cell 32" contenteditable="true"></td>
+            <td class="4X4cell 33" contenteditable="true"></td>
+            <td class="4X4cell 34" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="4X4cell 41" contenteditable="true"></td>
+            <td class="4X4cell 42" contenteditable="true"></td>
+            <td class="4X4cell 43" contenteditable="true"></td>
+            <td class="4X4cell 44" contenteditable="true"></td>
+          </tr>
+        </table>
+        <!-- 5 X 5 -->
+        <table id="5X5">
+          <tr>
+            <td class="5X5cell 11" contenteditable="true"></td>
+            <td class="5X5cell 12" contenteditable="true"></td>
+            <td class="5X5cell 13" contenteditable="true"></td>
+            <td class="5X5cell 14" contenteditable="true"></td>
+            <td class="5X5cell 15" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="5X5cell 21" contenteditable="true"></td>
+            <td class="5X5cell 22" contenteditable="true"></td>
+            <td class="5X5cell 23" contenteditable="true"></td>
+            <td class="5X5cell 24" contenteditable="true"></td>
+            <td class="5X5cell 25" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="5X5cell 31" contenteditable="true"></td>
+            <td class="5X5cell 32" contenteditable="true"></td>
+            <td class="5X5cell 33" contenteditable="true"></td>
+            <td class="5X5cell 34" contenteditable="true"></td>
+            <td class="5X5cell 35" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="5X5cell 41" contenteditable="true"></td>
+            <td class="5X5cell 42" contenteditable="true"></td>
+            <td class="5X5cell 43" contenteditable="true"></td>
+            <td class="5X5cell 44" contenteditable="true"></td>
+            <td class="5X5cell 45" contenteditable="true"></td>
+          </tr>
+          <tr>
+            <td class="5X5cell 51" contenteditable="true"></td>
+            <td class="5X5cell 52" contenteditable="true"></td>
+            <td class="5X5cell 53" contenteditable="true"></td>
+            <td class="5X5cell 54" contenteditable="true"></td>
+            <td class="5X5cell 55" contenteditable="true"></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 오른쪽 유저 정보 -->
+      <div id="right">
+        <div class="p2 user">
+          <p class="name2"></p>
+          <p class="state2">준비 완료</p>
+        </div>
+        <div class="p4 user">
+          <p class="name4"></p>
+          <p class="state4">준비 완료</p>
+        </div>
+        <div class="p6 user">
+          <p class="name6"></p>
+          <p class="state6">준비 완료</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 버튼 -->
+    <div id="buttons">
+      <button class="ready_btn">준비</button>
+      <button class="cancelReady_btn">준비 취소</button>
+      <button class="bingo_btn" disabled>BINGO!</button>
+      <button class="exit_btn">나가기</button>
+    </div>
+  </body>
+</html>
