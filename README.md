@@ -28,7 +28,7 @@ html, css, js(jquery, node.js), json
 6. 방 내 모든 플레이어가 준비 상태이면 게임 시작(p2의 차례)
 ![6](https://github.com/DigitalBard/Bingo-Game/assets/103251717/a0c9ab6c-cd96-4bef-b9bb-3713c48aeab8)<br><br>
 
-7. p2가 숫자를 선택한 후 p1에게 차례가 넘어감
+7. p2가 숫자를 선택한 후 p1에게 차례가 넘어감(좌측 화면이 p1, 우측 화면이 p2)
 ![7](https://github.com/DigitalBard/Bingo-Game/assets/103251717/936e1b99-e813-4477-a974-9273efac388a)<br><br>
 
 8. p2가 고른 숫자 4가 p1에게도 있으므로 p1은 4를 체크하고 자신의 차례이므로 5를 추가로 체크
