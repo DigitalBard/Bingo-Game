@@ -6,7 +6,7 @@ html, css, js(jquery, node.js), json
 
 ### 특징
 1. socket.io 를 이용하여 실시간 통신
-2. session, json 을 이용하여 사용자 구분
+2. session, json 을 이용하여 사용자 구분 및 중복 접속 방지
 3. room 단위로 최대 6인이 실시간 게임 진행
 
 ### 데모
@@ -19,7 +19,7 @@ html, css, js(jquery, node.js), json
 3. 대기실 화면과 방에 입장한 화면
 ![3](https://github.com/DigitalBard/Bingo-Game/assets/103251717/5cb77c2c-427d-47ed-a7b0-664312eb63f3)<br><br>
 
-4. 플레이어 두 명이 방에 입장한 상태(좌측 화면이 p1, 우측 화면이 p2)
+4. 플레이어 두 명이 방에 입장한 상태(좌측 화면이 p2, 우측 화면이 p1)
 ![4](https://github.com/DigitalBard/Bingo-Game/assets/103251717/b4443171-6bfe-41df-8ef9-2018c2b535ed)<br><br>
 
 5. 빙고판 작성을 마치고 레디 상태일 때
